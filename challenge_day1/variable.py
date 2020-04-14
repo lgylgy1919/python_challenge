@@ -7,7 +7,9 @@ a_none = None
 
 age = "18"
 print(type(age))
-
+# <class 'str'>
 n_age = int(age)
 print(n_age)
+# 18
 print(type(n_age))
+# <class 'int'>
