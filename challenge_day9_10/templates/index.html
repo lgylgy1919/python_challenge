@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet"></link>
+</head>
+
+<body>
+  <header>
+      <h1>Noamd News</h1>
+      <div>
+          <span> Order by : </span>
+          <span>Popular | </span>
+        <a href="/?order_by=new
+        ">New</a>
+      </div>
+  </header>
+<main>
+    {% for section in news %}
+    <div>
+        <div>
+            <a href="{{section.objectID}}">
+                <h3>
+                    {{section.title}}
+                </h3>
+            </a>
+            "("
+            <a href="{{section.url}}">
+                {{section.url}}
+            </a>")"
+        </div>
+        <div>
+            {{section.point }}points | By:{{section.author }} | {{section.num_comments }} comments
+        </div>
+    </div>
+    {% endfor %}
+</main>
+</body>
+
+</html>
